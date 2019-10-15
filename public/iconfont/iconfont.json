@@ -1,0 +1,23 @@
+{
+  "id": "1456455",
+  "name": "成绩管理系统",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "10480856",
+      "name": "课程",
+      "font_class": "kecheng",
+      "unicode": "e66c",
+      "unicode_decimal": 58988
+    },
+    {
+      "icon_id": "11118759",
+      "name": "成绩",
+      "font_class": "chengji",
+      "unicode": "e664",
+      "unicode_decimal": 58980
+    }
+  ]
+}
