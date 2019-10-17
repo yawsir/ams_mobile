@@ -1,7 +1,8 @@
 <template>
     <div id="elective">
 
-        <table class="table">
+        <div class="table-wrap">
+            <table class="table">
                 <tr class="table-head">
                     <th class="table-head-data">课号</th>
                     <th class="table-head-data">课名</th>
@@ -16,7 +17,11 @@
                     <td class="table-data">{{item.subject_current}}/{{item.subject_max}}</td>
                     <td class="table-data"><button class="choose" @click="elective(item.subject_id, item.teacher_id)">选修</button></td>
                 </tr>
-        </table>
+            </table>
+
+        </div>
+
+        
     </div>
 </template>
 
@@ -79,19 +84,39 @@ export default {
 
 <style lang="scss" scoped>
 #elective{
-    .table{
-        width: 7rem;
-        margin: .5rem auto;
-        font-size: .35rem;
-        color: #909399;
-        .table-head{
-            .table-head-data{
-                color: #303133;
+    height: 12rem;
+    margin-bottom: 1rem;
+    overflow-y: scroll;
+    .table-wrap{
+        .table{
+            width: 95%;
+            margin: .5rem auto;
+            font-size: .35rem;
+            color: #909399;
+            .table-head{
+                .table-head-data{
+                    color: #303133;
+                    border  : 1px solid #cdcdcd;
+                    padding: .1rem;
+                }
             }
-        }
-        .table-row{
-            .table-data{
-                padding: .3rem 0 0 0;
+            .table-row{
+                .table-data{
+                    padding: .3rem 0 .3rem 0;
+                    border  : 1px solid #cdcdcd;                
+                    .choose{
+                        background: #009789;
+                        border: 1px;
+                        border-radius: .1rem;
+                        box-shadow: .02rem .02rem .05rem .02rem;
+                        color: #fff;
+                        font-size: .25rem;
+                        padding: .05rem .1rem;
+                        &:active{
+                            background: #02b19f;
+                        }
+                    }
+                }
             }
         }
     }

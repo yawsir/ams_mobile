@@ -9,9 +9,11 @@ import {
   // basic
   Button,
   TabBar,
-  Toast
+  Toast,
+  Dialog
 } from 'cube-ui'
 Vue.use(Style)
 Vue.use(Button)
 Vue.use(TabBar)
 Vue.use(Toast)
+Vue.use(Dialog)

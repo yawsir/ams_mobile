@@ -80,14 +80,14 @@ export default {
         }
     }
     input[type=text], input[type=password]{
-        width: 6rem;
-        height: .6rem;
+        width: 8rem;
+        height: .8rem;
         border-bottom: 1px solid #cdcdcd;
         margin: .3rem auto;
     }
     .role-radio{
         label{
-            margin: 0 .3rem 0 .1rem;
+            margin: 0 .5rem 0 .2rem;
         }
     }
     .login-btn{

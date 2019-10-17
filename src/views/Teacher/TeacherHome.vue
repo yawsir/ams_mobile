@@ -1,5 +1,6 @@
 <template>
     <div id="teacher-home">
+        <div class="page-head">{{headContent}}</div>
         <keep-alive>
             <router-view></router-view>
         </keep-alive>
@@ -21,6 +22,7 @@ export default {
 
     data() {
         return {
+            headContent: '学生成绩',
             selectedLabelDefault: '成绩',
             tabs: [{
                 label: '成绩',
@@ -36,8 +38,10 @@ export default {
             // if you clicked home tab, then print 'Home'
             console.log(label)
             if(label === '成绩'){
+                this.headContent = '学生成绩'
                 this.$router.push({path: '/teacher/grade'})
             }else{
+                this.headContent = '个人中心'
                 this.$router.push({path: '/teacher/personal'})
             }
         },
@@ -48,6 +52,18 @@ export default {
 
 <style lang="scss" scoped>
 #teacher-home{
+    width: 100%;
+    .page-head{
+        width: 100%;
+        background: #FC9153;
+        color: #fff;
+        height: 1rem;
+        line-height: 1rem;
+        font-size: .4rem;
+        text-align: left;
+        box-sizing: border-box;
+        padding: 0 0 0 .5rem;
+    }
     .tabbar{
         width: 100%;
         font-size: 12px;
